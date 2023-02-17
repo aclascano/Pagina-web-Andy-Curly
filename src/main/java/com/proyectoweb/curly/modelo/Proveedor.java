@@ -1,24 +1,39 @@
 package com.proyectoweb.curly.modelo;
 
-public class proveedor {
+import javax.persistence.*;
 
-    private int id_pro;
+@Entity
+@Table(name = "proveedor")
+public class Proveedor {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_pro;
     private String nombre_pro;
     private String telefono_pro;
     private String correo_pro;
 
-    public proveedor(int id_pro, String nombre_pro, String telefono_pro, String correo_pro) {
+    public Proveedor(Integer id_pro, String nombre_pro, String telefono_pro, String correo_pro) {
         this.id_pro = id_pro;
         this.nombre_pro = nombre_pro;
         this.telefono_pro = telefono_pro;
         this.correo_pro = correo_pro;
     }
 
-    public int getId_pro() {
+    public Proveedor( String nombre_pro, String telefono_pro, String correo_pro) {
+        this.nombre_pro = nombre_pro;
+        this.telefono_pro = telefono_pro;
+        this.correo_pro = correo_pro;
+    }
+    public Proveedor() {
+
+    }
+
+    public Integer getId_pro() {
         return id_pro;
     }
 
-    public void setId_pro(int id_pro) {
+    public void setId_pro(Integer id_pro) {
         this.id_pro = id_pro;
     }
 
@@ -45,5 +60,4 @@ public class proveedor {
     public void setCorreo_pro(String correo_pro) {
         this.correo_pro = correo_pro;
     }
-
 }
