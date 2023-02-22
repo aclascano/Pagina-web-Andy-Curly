@@ -25,10 +25,6 @@ public class Usuario {
 
 	@Column(name = "nombre")
 	private String nombre;
-
-	@Column(name = "apellido")
-	private String apellido;
-
 	private String email;
 	private String password;
 	
@@ -56,14 +52,6 @@ public class Usuario {
 		this.nombre = nombre;
 	}
 
-	public String getApellido() {
-		return apellido;
-	}
-
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -88,20 +76,18 @@ public class Usuario {
 		this.roles = roles;
 	}
 
-	public Usuario(Long id, String nombre, String apellido, String email, String password, Collection<Rol> roles) {
+	public Usuario(Long id, String nombre, String email, String password, Collection<Rol> roles) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.apellido = apellido;
 		this.email = email;
 		this.password = password;
 		this.roles = roles;
 	}
 
-	public Usuario(String nombre, String apellido, String email, String password, Collection<Rol> roles) {
+	public Usuario(String nombre,  String email, String password, Collection<Rol> roles) {
 		super();
 		this.nombre = nombre;
-		this.apellido = apellido;
 		this.email = email;
 		this.password = password;
 		this.roles = roles;

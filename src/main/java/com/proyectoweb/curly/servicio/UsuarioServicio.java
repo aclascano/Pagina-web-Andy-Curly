@@ -11,14 +11,15 @@ import com.proyectoweb.curly.modelo.Usuario;
 
 public interface UsuarioServicio extends UserDetailsService{
 
+	public List<Usuario> listarUsuarios();
 	public Usuario guardar(UsuarioRegistroDTO registroDTO);
 
-	Usuario actualizar(Long id, UsuarioRegistroDTO registroDTO) throws UsuarioNoEncontradoException;
+	Usuario obtenerUsuarioPorId(Long id);
+	public Usuario actualizarUsuario(Usuario usuario);
 
-	void eliminar(Long id) throws UsuarioNoEncontradoException;
+	public void eliminar(Long id) ;
 
-	public List<Usuario> listarUsuarios();
-	Usuario buscarPorId(Long id);
+
 	public Long contarUsuarios();
 
 

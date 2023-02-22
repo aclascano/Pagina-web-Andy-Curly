@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <title>
-   Usuarios
+   Dirección
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -253,134 +253,241 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Entidades</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Usuarios</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Clientes
+              </li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Lista de Usuarios</h6>
+          <h6 class="font-weight-bolder mb-0">Direcciones</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-
+            
           </div>
-          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-
-            </div>
-            <ul class="navbar-nav  justify-content-end">
-              <li class="nav-item d-flex align-items-center">
-                <a th:href="@{/logout}" class="nav-link text-body font-weight-bold px-3">
-                  <i class="fa fa-user me-sm-1"></i>
-                  <span class="d-sm-inline d-none">Cerrar sesión</span>
-                </a>
-              </li>
-
-              <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-bell cursor-pointer"></i>
-                </a>
-                <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img src=" /img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New message</span> from Laur
-                          </h6>
-                          <p class="text-xs text-secondary mb-0 ">
-                            <i class="fa fa-clock me-1"></i>
-                            13 minutes ago
-                          </p>
-                        </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center">
+              <a th:href="@{/logout}" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Cerrar sesión</span>
+              </a>
+            </li>
+          
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer"></i>
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
                       </div>
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img src=" /img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New album</span> by Travis Scott
-                          </h6>
-                          <p class="text-xs text-secondary mb-0 ">
-                            <i class="fa fa-clock me-1"></i>
-                            1 day
-                          </p>
-                        </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span> from Laur
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          13 minutes ago
+                        </p>
                       </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                          <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>credit-card</title>
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                <g transform="translate(1716.000000, 291.000000)">
-                                  <g transform="translate(453.000000, 454.000000)">
-                                    <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                  </g>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New album</span> by Travis Scott
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
                                 </g>
                               </g>
                             </g>
-                          </svg>
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            Payment successfully completed
-                          </h6>
-                          <p class="text-xs text-secondary mb-0 ">
-                            <i class="fa fa-clock me-1"></i>
-                            2 days
-                          </p>
-                        </div>
+                          </g>
+                        </svg>
                       </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          Payment successfully completed
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          2 days
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
     <!-- ZONA PARA MOSTRAR CRUD -->
     <div class="container-fluid py-4">
-      
-      <table class="table table-striped table-bordered">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Nombre de Usuario</th>
-            <th>Email</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr th:each="usuario : ${usuarios}">
-            <td th:text="${usuario.id}">ID</td>
-            <td th:text="${usuario.nombre}">ID</td>
-            <td th:text="${usuario.email}">ID</td>
-            <td>
-              <a th:href="@{/usuarios/{id}(id=${usuario.id})}" class="btn" style="background-color:#F2A7BB">Eliminar</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      
+      <h4 class="text-center">Agregar Direccion</h4>
+      <br>
+      <div class="card-body">
+        <form th:action="@{/clientes/{id}/direcciones(id=${cliente.id_cli})}" th:object="${direccion}" method="POST">
+          <div class="row mb-3">
+            <div class="col">
+              <label for="provincia" class="form-label">Provincia</label>
+              <select class="form-select" id="provincia" name="provincia" th:field="*{provincia}">
+                <option value="">Seleccione una provincia</option>
+                <option value="azuay">Azuay</option>
+                <option value="bolivar">Bolívar</option>
+                <option value="cañar">Cañar</option>
+                <option value="carchi">Carchi</option>
+                <option value="chimborazo">Chimborazo</option>
+                <option value="cotopaxi">Cotopaxi</option>
+                <option value="eloro">El Oro</option>
+                <option value="esmeraldas">Esmeraldas</option>
+                <option value="galapagos">Galápagos</option>
+                <option value="guayas">Guayas</option>
+                <option value="imbabura">Imbabura</option>
+                <option value="loja">Loja</option>
+                <option value="losrios">Los Ríos</option>
+                <option value="manabi">Manabí</option>
+                <option value="moronasantiago">Morona Santiago</option>
+                <option value="napo">Napo</option>
+                <option value="orellana">Orellana</option>
+                <option value="pastaza">Pastaza</option>
+                <option value="pichincha">Pichincha</option>
+                <option value="santaelena">Santa Elena</option>
+                <option value="santodomingo">Santo Domingo de los Tsáchilas</option>
+                <option value="sucumbios">Sucumbíos</option>
+                <option value="tungurahua">Tungurahua</option>
+                <option value="zamorachinchipe">Zamora Chinchipe</option>
+              </select>
+            </div>
+            <div class="col">
+              <label for="canton" class="form-label">Cantón</label>
+              <select class="form-select" id="canton" name="canton" th:field="*{ciudad}">
+                <option value="">Seleccione un cantón</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="calleprincipal" class="form-label">Calle principal</label>
+            <input type="text" class="form-control" id="calleprincipal" name="calleprincipal" th:field="*{calleprincipal}">
+          </div>
+
+          <div class="mb-3">
+            <label for="callesecundaria" class="form-label">Calle secundaria</label>
+            <input type="text" class="form-control" id="callesecundaria" name="callesecundaria" th:field="*{callesecundaria}">
+          </div>
+
+          <div class="mb-3">
+            <label for="referencia" class="form-label">Referencia</label>
+            <input type="text" class="form-control" id="referencia" name="referencia" th:field="*{referencia}">
+          </div>
+
+          <div class="row mb-3">
+            <div class="col">
+              <label for="numcasa" class="form-label">Número de Casa</label>
+              <input type="text" class="form-control" id="numcasa" name="numcasa" th:field="*{numcasa}">
+            </div>
+
+            <div class="col">
+              <label for="codigopostal" class="form-label">Código Postal </label>
+              <input type="number" class="form-control" id="codigopostal" name="codigopostal" th:field="*{codigopostal}">
+            </div>
+          </div>
+          <div class="form-group text-center">
+            <button  class="btn btn-primary">
+              <i class="fas fa-save"></i> Guardar</button>
+          </div>
+        </form>
+      </div>
+
+
       
       
     </div>
   </main>
   
   <!--   Core JS Files   -->
+<!--SCRIPT PARA GENERAR PROVINCIAS Y CANTONES-->
+<script>
+   const provinciaSelect = document.getElementById('provincia');
+
+   const cantonSelect = document.getElementById('canton');
+
+  const cantonesPorProvincia = {
+  'azuay': ['Cuenca', 'Girón', 'Gualaceo', 'Nabón', 'Paute', 'Pucará', 'San Fernando', 'Santa Isabel', 'Sigsig'],
+  'bolivar': ['Guaranda', 'Chillanes', 'Chimbo', 'Echeandía', 'San Miguel', 'Caluma', 'Las Naves'],
+  'cañar': ['Azogues', 'Biblián', 'Cañar', 'La Troncal', 'El Tambo', 'Déleg', 'Suscal'],
+  'carchi': ['Tulcán', 'Bolívar', 'Espejo', 'Mira', 'Montúfar', 'San Pedro de Huaca'],
+  'chimborazo': ['Riobamba', 'Alausí', 'Colta', 'Chambo', 'Chunchi', 'Guamote', 'Guano', 'Pallatanga', 'Penipe'],
+  'cotopaxi': ['Latacunga', 'La Maná', 'Pangua', 'Pujilí', 'Salcedo', 'Saquisilí', 'Sigchos'],
+  'eloro': ['Machala', 'Arenillas', 'Atahualpa', 'Balsas', 'Chilla', 'El Guabo', 'Huaquillas', 'Marcabelí', 'Pasaje', 'Piñas', 'Portovelo', 'Santa Rosa', 'Zaruma'],
+  'esmeraldas': ['Esmeraldas', 'Atacames', 'Eloy Alfaro', 'Muisne', 'Quinindé', 'San Lorenzo'],
+  'galapagos': ['San Cristóbal', 'Isabela', 'Santa Cruz'],
+  'guayas': ['Guayaquil', 'Alfredo Baquerizo Moreno', 'Balao', 'Balzar', 'Colimes', 'Daule', 'Durán', 'El Empalme', 'El Triunfo', 'General Antonio Elizalde', 'Isidro Ayora', 'Lomas de Sargentillo', 'Milagro', 'Naranjal', 'Naranjito', 'Nobol', 'Palestina', 'Pedro Carbo', 'Playas', 'Salitre', 'Samborondón', 'Santa Lucía', 'Simón Bolívar', 'Yaguachi'],
+  'imbabura': ['Ibarra', 'Antonio Ante', 'Cotacachi', 'Otavalo', 'Pimampiro', 'San Miguel de Urcuquí'],
+  'losrios': ['Baba', 'Babahoyo', 'Buena Fé', 'Mocache', 'Montalvo', 'Palenque', 'Puebloviejo', 'Quevedo', 'Urdaneta', 'Valencia', 'Ventanas', 'Vinces'],
+  'loja': ['Loja', 'Calvas', 'Catamayo', 'Celica', 'Chaguarpamba', 'Espíndola', 'Gonzanamá', 'Macará', 'Olmedo', 'Paltas', 'Puyango', 'Quilanga', 'Saraguro', 'Sozoranga', 'Zapotillo'],
+  'manabi': ['Portoviejo', 'Manta', 'Montecristi', 'Jaramijó', 'Jipijapa', 'Puerto López', 'Sucre', 'Olmedo', 'Calceta', 'Chone', 'Flavio Alfaro', 'Junín', 'Mocache', 'Rocafuerte', 'Santa Ana'],
+  'moronasantiago': ['Macas', 'Morona', 'Gualaquiza', 'Limon Indanza', 'Palora', 'Santiago', 'Sucúa', 'Huamboya', 'San Juan Bosco', 'Taisha', 'Logroño'],
+  'napo': ['Tena', 'Archidona', 'El Chaco', 'Quijos'],
+  'orellana': ['Coca', 'Aguarico', 'La Joya de los Sachas', 'Loreto'],
+  'pastaza': ['Mera', 'Santa Clara', 'Arajuno', 'Pastaza'],
+  'pichincha': ['Quito', 'Cayambe', 'Mejía', 'Pedro Moncayo', 'Rumiñahui', 'San Miguel de los Bancos'],
+  'santaelena': ['Santa Elena', 'La Libertad', 'Salinas'],
+  'santodomingo': ['Santo Domingo', 'La Concordia'],
+  'sucumbios': ['Lago Agrio', 'Cascales', 'Cuyabeno', 'Gonzalo Pizarro', 'Putumayo', 'Shushufindi', 'Sucumbíos'],
+  'tungurahua': ['Ambato', 'Baños de Agua Santa', 'Cevallos', 'Mocha', 'Patate', 'Pelileo', 'Píllaro', 'Quero', 'Tisaleo'],
+  'zamorachinchipe': ['Zamora', 'Chinchipe', 'Nangaritza', 'Yacuambi', 'Yantzaza', 'El Pangui', 'Centinela del Cóndor', 'Palanda', 'Paquisha']
+
+
+
+   };
+
+
+   function actualizarCantones() {
+  const provinciaSeleccionada = provinciaSelect.value;
+  const cantones = cantonesPorProvincia[provinciaSeleccionada];
+  if (cantones) {
+    cantonSelect.innerHTML = '';
+    cantones.forEach((canton) => {
+      const option = document.createElement('option');
+      option.value = canton;
+      option.text = canton;
+      cantonSelect.add(option);
+    });
+  } else {
+    cantonSelect.innerHTML = '';
+  }
+}
+
+provinciaSelect.addEventListener('change', actualizarCantones);
+
+</script>
   
   <!-- Github buttons -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>

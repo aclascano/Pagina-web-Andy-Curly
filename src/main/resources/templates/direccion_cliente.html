@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <title>
-   Usuarios
+    Direcciones de clientes
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -253,9 +253,9 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Entidades</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Usuarios</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Clientes</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Lista de Usuarios</h6>
+          <h6 class="font-weight-bolder mb-0">Lista de direcciones</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -352,40 +352,67 @@
       </div>
     </nav>
     <!-- ZONA PARA MOSTRAR CRUD -->
-    <div class="container-fluid py-4">
-      
-      <table class="table table-striped table-bordered">
-        <thead class="table-dark">
+    <div class="container-fluid py-4 table-responsive">
+      <div class="text-center my-3">
+        <h3>Nombre:<span th:text="${cliente.nombre}">xd</span></h3>
+      </div>
+      <table class="table table-striped table-bordered align-middle">
+        <thead class="text-white" style="background-color:#2C2D40" >
           <tr>
-            <th>ID</th>
-            <th>Nombre de Usuario</th>
-            <th>Email</th>
-            <th>Acciones</th>
+            <th>Provincia</th>
+            <th>Canton</th>
+            <th>Calle principal</th>
+            <th>Calle Secundaria</th>
+            <th>Rerencia</th>
+            <th>Número de Casa</th>
+            <th>Código Postal</th>
+            <th>ACCIONES</th>
           </tr>
         </thead>
         <tbody>
-          <tr th:each="usuario : ${usuarios}">
-            <td th:text="${usuario.id}">ID</td>
-            <td th:text="${usuario.nombre}">ID</td>
-            <td th:text="${usuario.email}">ID</td>
+          <tr th:each="direccion : ${direcciones}">
+            <td th:text="${direccion.provincia}">ID</td>
+            <td th:text="${direccion.ciudad}">ID</td>
+            <td th:text="${direccion.calleprincipal}">ID</td>
+            <td th:text="${direccion.callesecundaria}">ID</td>
+            <td th:text="${direccion.referencia}">ID</td>
+            <td th:text="${direccion.numcasa}">ID</td>
+            <td th:text="${direccion.codigopostal}">ID</td>
+
             <td>
-              <a th:href="@{/usuarios/{id}(id=${usuario.id})}" class="btn" style="background-color:#F2A7BB">Eliminar</a>
+              <a th:href="@{/}" class="btn" style="background-color:#F2D8DF">
+                <i class="fas fa-edit"></i> Editar</a>
+              <a th:href="@{/}" class="btn" style="background-color:#F2A7BB">
+                <i class="fas fa-trash-alt"></i> Eliminar</a>
             </td>
           </tr>
         </tbody>
       </table>
-      
-      
-      
-    </div>
+
+
+
   </main>
-  
-  <!--   Core JS Files   -->
-  
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="/js/soft-ui-dashboard.min.js?v=1.0.7"></script>
+
+<script src=" /js/core/popper.min.js"></script>
+<script src=" /js/core/bootstrap.min.js"></script>
+<script src=" /js/plugins/perfect-scrollbar.min.js"></script>
+<script src=" /js/plugins/smooth-scrollbar.min.js"></script>
+<script src=" /js/plugins/chartjs.min.js"></script>
+
+
+<script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+ </script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+<script src=" /js/soft-ui-dashboard.min.js?v=1.0.7"></script>
 </body>
 
 </html>

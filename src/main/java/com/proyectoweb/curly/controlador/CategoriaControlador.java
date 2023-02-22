@@ -38,11 +38,11 @@ public class CategoriaControlador {
     @GetMapping("/categorias/editar/{id}")
     public String mostrarFormularioDeEditar(@PathVariable Integer id, Model modelo) {
         modelo.addAttribute("categoria", servicio.obtenerCategoriaPorId(id));
-        return "categoria_formulario";
+        return "categoria_formulario_editar";
     }
 
     @PostMapping("/categorias/{id}")
-    public String actualizarCategoria(@PathVariable Integer id, @ModelAttribute("categoria") Categoria categoria) {
+    public String actualizarCategoria(@PathVariable Integer id, @ModelAttribute("categoria") Categoria categoria, Model modelo) {
         Categoria categoriaExistente = servicio.obtenerCategoriaPorId(id);
         categoriaExistente.setId_cat(id);
         categoriaExistente.setNombre(categoria.getNombre());

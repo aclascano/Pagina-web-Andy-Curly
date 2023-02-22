@@ -22,8 +22,8 @@ public class ProveedorControlador {
     private ProveedorServicio servicio;
 
 
-    @GetMapping({ "/proveedores"})
-    public String listarProveedore(Model modelo) {
+    @GetMapping({"/proveedores"})
+    public String slistarProveedore(Model modelo) {
         modelo.addAttribute("proveedores", servicio.listarProveedor());
         return "proveedor";
     }
@@ -44,7 +44,7 @@ public class ProveedorControlador {
     @GetMapping("/proveedores/editar/{id}")
     public String editarProveedor(@PathVariable Integer id, Model modelo) {
         modelo.addAttribute("proveedor", servicio.obtenerProveedorPorId(id));
-        return "proveedor_formulario";
+        return "proveedor_formulario_editar";
     }
 
     @PostMapping("/proveedores/{id}")

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thymeleaf.org">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="/img/apple-icon.png">
   <link rel="icon" type="image/png" href="/img/favicon.png">
   <title>
-   Usuarios
+   Producto
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -253,128 +253,156 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Entidades</a></li>
-            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Usuarios</li>
+            <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Productos</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Lista de Usuarios</h6>
+          <h6 class="font-weight-bolder mb-0">Producto</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-
+            
           </div>
-          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-
-            </div>
-            <ul class="navbar-nav  justify-content-end">
-              <li class="nav-item d-flex align-items-center">
-                <a th:href="@{/logout}" class="nav-link text-body font-weight-bold px-3">
-                  <i class="fa fa-user me-sm-1"></i>
-                  <span class="d-sm-inline d-none">Cerrar sesión</span>
-                </a>
-              </li>
-
-              <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-bell cursor-pointer"></i>
-                </a>
-                <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img src=" /img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New message</span> from Laur
-                          </h6>
-                          <p class="text-xs text-secondary mb-0 ">
-                            <i class="fa fa-clock me-1"></i>
-                            13 minutes ago
-                          </p>
-                        </div>
+          <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item d-flex align-items-center">
+              <a th:href="@{/logout}" class="nav-link text-body font-weight-bold px-0">
+                <i class="fa fa-user me-sm-1"></i>
+                <span class="d-sm-inline d-none">Cerrar sesión</span>
+              </a>
+            </li>
+          
+            <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell cursor-pointer"></i>
+              </a>
+              <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
                       </div>
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img src=" /img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New album</span> by Travis Scott
-                          </h6>
-                          <p class="text-xs text-secondary mb-0 ">
-                            <i class="fa fa-clock me-1"></i>
-                            1 day
-                          </p>
-                        </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New message</span> from Laur
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          13 minutes ago
+                        </p>
                       </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                          <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>credit-card</title>
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                <g transform="translate(1716.000000, 291.000000)">
-                                  <g transform="translate(453.000000, 454.000000)">
-                                    <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                  </g>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="my-auto">
+                        <img src="/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                      </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          <span class="font-weight-bold">New album</span> by Travis Scott
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          1 day
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex py-1">
+                      <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                        <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <title>credit-card</title>
+                          <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                              <g transform="translate(1716.000000, 291.000000)">
+                                <g transform="translate(453.000000, 454.000000)">
+                                  <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
+                                  <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
                                 </g>
                               </g>
                             </g>
-                          </svg>
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            Payment successfully completed
-                          </h6>
-                          <p class="text-xs text-secondary mb-0 ">
-                            <i class="fa fa-clock me-1"></i>
-                            2 days
-                          </p>
-                        </div>
+                          </g>
+                        </svg>
                       </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="text-sm font-weight-normal mb-1">
+                          Payment successfully completed
+                        </h6>
+                        <p class="text-xs text-secondary mb-0 ">
+                          <i class="fa fa-clock me-1"></i>
+                          2 days
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
     <!-- ZONA PARA MOSTRAR CRUD -->
     <div class="container-fluid py-4">
-      
-      <table class="table table-striped table-bordered">
-        <thead class="table-dark">
-          <tr>
-            <th>ID</th>
-            <th>Nombre de Usuario</th>
-            <th>Email</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr th:each="usuario : ${usuarios}">
-            <td th:text="${usuario.id}">ID</td>
-            <td th:text="${usuario.nombre}">ID</td>
-            <td th:text="${usuario.email}">ID</td>
-            <td>
-              <a th:href="@{/usuarios/{id}(id=${usuario.id})}" class="btn" style="background-color:#F2A7BB">Eliminar</a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      
+      <h4 class="text-center">Editar Producto</h4>
+      <br>
+      <div class="card-body">
+        <form th:action="@{/productos/{id}(id=${producto.id_producto})}" th:object="${producto}" method="POST" >
+
+          <div class=" form-group mb-3">
+            <label for="nombre">Nombre : </label>
+            <input id="nombre" name="nombre" type="text" placeholder="Digite su nombre " th:field="*{nombre}" class="form-control"  required>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="nombre">Cantidad : </label>
+            <input id="cantidad" name="cantidad" type="number" placeholder="Ingrese la cantidad " th:field="*{cantidad}" class="form-control"  required>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="nombre">Precio : </label>
+            <input id="precio" type="number" name="precio" placeholder="Digite el precio " th:field="*{precio}" class="form-control"  required>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="nombre">Descrippción : </label>
+            <input id="descripccion" type="text" name="descripccion" placeholder="Ingrese una descripcción" th:field="*{descripccion}" class="form-control"  required>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="nombre">Fotografía : </label>
+            <input id="fotografia" type="text" name="fotografia" placeholder="Ingrese un link " th:field="*{fotografia}" class="form-control"  required>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria.id_cat" class="form-select">
+              <option value="">Seleccione una categoría</option>
+              <option th:each="categoria : ${categorias}" th:value="${categoria.id_cat}" th:text="${categoria.nombre}" ></option>
+            </select>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="proveedor">Proveedor:</label>
+            <select id="proveedor" name="proveedor.id_pro" class="form-select">
+              <option value="">Seleccione un proveedor</option>
+              <option th:each="proveedor : ${proveedores}" th:value="${proveedor.id_pro}" th:text="${proveedor.nombre_pro}" ></option>
+            </select>
+          </div>
+
+          <div class="form-group text-end">
+            <button  class="btn btn-success"><i class="fas fa-save"></i>&nbsp;Guardar</button>
+            <a href="/" class="btn btn-light ms-2"><i class="fas fa-backward"></i>Cancelar </a>
+          </div>
+
+        </form>
+      </div>
+
+
       
       
     </div>

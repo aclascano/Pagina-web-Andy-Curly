@@ -1,89 +1,109 @@
 package com.proyectoweb.curly.modelo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "direccion")
 public class Direccion {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id_dir;
+    private String provincia;
+    private String ciudad;
+    private String calleprincipal;
+    private String callesecundaria;
+    private String referencia;
+    private String numcasa;
+    private String codigopostal;
 
-    private int id_dir;
-    private String provincia_dir;
-    private String ciudad_dir;
-    private String calleprincipal_dir;
-    private String callesecundaria_dir;
-    private String referencia_dir;
-    private String numcasa_dir;
-    private String codigopostal_dir;
-
-    public Direccion(int id_dir, String provincia_dir, String ciudad_dir, String calleprincipal_dir,
-                     String callesecundaria_dir, String referencia_dir, String numcasa_dir, String codigopostal_dir) {
+    public Direccion(Integer id_dir, String provincia, String ciudad, String calleprincipal, String callesecundaria, String referencia, String numcasa, String codigopostal) {
+        super();
         this.id_dir = id_dir;
-        this.provincia_dir = provincia_dir;
-        this.ciudad_dir = ciudad_dir;
-        this.calleprincipal_dir = calleprincipal_dir;
-        this.callesecundaria_dir = callesecundaria_dir;
-        this.referencia_dir = referencia_dir;
-        this.numcasa_dir = numcasa_dir;
-        this.codigopostal_dir = codigopostal_dir;
+        this.provincia = provincia;
+        this.ciudad = ciudad;
+        this.calleprincipal = calleprincipal;
+        this.callesecundaria = callesecundaria;
+        this.referencia = referencia;
+        this.numcasa = numcasa;
+        this.codigopostal = codigopostal;
     }
 
-    public int getId_dir() {
+    public Direccion(String provincia, String ciudad, String calleprincipal, String callesecundaria, String referencia, String numcasa, String codigopostal) {
+        super();
+        this.provincia = provincia;
+        this.ciudad = ciudad;
+        this.calleprincipal = calleprincipal;
+        this.callesecundaria = callesecundaria;
+        this.referencia = referencia;
+        this.numcasa = numcasa;
+        this.codigopostal = codigopostal;
+    }
+
+    public Direccion() {
+        super();
+    }
+
+    public Integer getId_dir() {
         return id_dir;
     }
 
-    public void setId_dir(int id_dir) {
+    public void setId_dir(Integer id_dir) {
         this.id_dir = id_dir;
     }
 
-    public String getProvincia_dir() {
-        return provincia_dir;
+    public String getProvincia() {
+        return provincia;
     }
 
-    public void setProvincia_dir(String provincia_dir) {
-        this.provincia_dir = provincia_dir;
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
     }
 
-    public String getCiudad_dir() {
-        return ciudad_dir;
+    public String getCiudad() {
+        return ciudad;
     }
 
-    public void setCiudad_dir(String ciudad_dir) {
-        this.ciudad_dir = ciudad_dir;
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
     }
 
-    public String getCalleprincipal_dir() {
-        return calleprincipal_dir;
+    public String getCalleprincipal() {
+        return calleprincipal;
     }
 
-    public void setCalleprincipal_dir(String calleprincipal_dir) {
-        this.calleprincipal_dir = calleprincipal_dir;
+    public void setCalleprincipal(String calleprincipal) {
+        this.calleprincipal = calleprincipal;
     }
 
-    public String getCallesecundaria_dir() {
-        return callesecundaria_dir;
+    public String getCallesecundaria() {
+        return callesecundaria;
     }
 
-    public void setCallesecundaria_dir(String callesecundaria_dir) {
-        this.callesecundaria_dir = callesecundaria_dir;
+    public void setCallesecundaria(String callesecundaria) {
+        this.callesecundaria = callesecundaria;
     }
 
-    public String getReferencia_dir() {
-        return referencia_dir;
+    public String getReferencia() {
+        return referencia;
     }
 
-    public void setReferencia_dir(String referencia_dir) {
-        this.referencia_dir = referencia_dir;
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
     }
 
-    public String getNumcasa_dir() {
-        return numcasa_dir;
+    public String getNumcasa() {
+        return numcasa;
     }
 
-    public void setNumcasa_dir(String numcasa_dir) {
-        this.numcasa_dir = numcasa_dir;
+    public void setNumcasa(String numcasa) {
+        this.numcasa = numcasa;
     }
 
-    public String getCodigopostal_dir() {
-        return codigopostal_dir;
+    public String getCodigopostal() {
+        return codigopostal;
     }
 
-    public void setCodigopostal_dir(String codigopostal_dir) {
-        this.codigopostal_dir = codigopostal_dir;
+    public void setCodigopostal(String codigopostal) {
+        this.codigopostal = codigopostal;
     }
 }

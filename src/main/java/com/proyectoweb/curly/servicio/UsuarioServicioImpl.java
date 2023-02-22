@@ -3,7 +3,6 @@ package com.proyectoweb.curly.servicio;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.proyectoweb.curly.excepcions.UsuarioNoEncontradoException;
@@ -24,7 +23,7 @@ import com.proyectoweb.curly.repositorio.UsuarioRepositorio;
 @Service
 public class UsuarioServicioImpl implements UsuarioServicio {
 
-	
+	@Autowired
 	private UsuarioRepositorio usuarioRepositorio;
 
 	@Autowired
@@ -38,9 +37,24 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 	@Override
 	public Usuario guardar(UsuarioRegistroDTO registroDTO) {
 		Usuario usuario = new Usuario(registroDTO.getNombre(), 
-				registroDTO.getApellido(),registroDTO.getEmail(),
+				registroDTO.getEmail(),
 				passwordEncoder.encode(registroDTO.getPassword()),Arrays.asList(new Rol("CLIENTE")));
 		return usuarioRepositorio.save(usuario);
+	}
+
+	@Override
+	public Usuario obtenerUsuarioPorId(Long id) {
+		return usuarioRepositorio.findById(id).get();
+	}
+
+	@Override
+	public Usuario actualizarUsuario(Usuario usuario) {
+		return usuarioRepositorio.save(usuario);
+	}
+
+	@Override
+	public void eliminar(Long id) {
+		usuarioRepositorio.deleteById(id);
 	}
 
 	@Override
@@ -50,32 +64,6 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 			throw new UsernameNotFoundException("Usuario o password inválidos");
 		}
 		return new User(usuario.getEmail(),usuario.getPassword(), mapearAutoridadesRoles(usuario.getRoles()));
-	}
-
-	@Override
-	public Usuario actualizar(Long id, UsuarioRegistroDTO registroDTO) throws UsuarioNoEncontradoException {
-		Optional<Usuario> usuarioOpt = usuarioRepositorio.findById(id);
-		if (usuarioOpt.isPresent()) {
-			Usuario usuario = usuarioOpt.get();
-			usuario.setNombre(registroDTO.getNombre());
-			usuario.setApellido(registroDTO.getApellido());
-			usuario.setEmail(registroDTO.getEmail());
-			usuario.setPassword(passwordEncoder.encode(registroDTO.getPassword()));
-			return usuarioRepositorio.save(usuario);
-		} else {
-			throw new UsuarioNoEncontradoException("Usuario no encontrado");
-		}
-	}
-
-	@Override
-	public void eliminar(Long id) throws UsuarioNoEncontradoException {
-		Optional<Usuario> usuarioOpt = usuarioRepositorio.findById(id);
-		if (usuarioOpt.isPresent()) {
-			Usuario usuario = usuarioOpt.get();
-			usuarioRepositorio.delete(usuario);
-		} else {
-			throw new UsuarioNoEncontradoException("Usuario no encontrado");
-		}
 	}
 
 
@@ -90,11 +78,7 @@ public class UsuarioServicioImpl implements UsuarioServicio {
 		return usuarioRepositorio.findAll();
 	}
 
-	@Override
-	public Usuario buscarPorId(Long id) {
-		return usuarioRepositorio.findById(id)
-				.orElseThrow(() -> new UsuarioNoEncontradoException("Usuario no encontrado"));
-	}
+
 
 	@Override
 	public Long contarUsuarios() {

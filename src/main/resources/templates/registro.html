@@ -94,14 +94,8 @@
 							<h1 class="text-center">Regístrate</h1>
 							<form th:action="@{/registro}" method="post" th:object="${usuario}">
 								<div class="form-group">
-									<label class="control-label" for="nombre">Nombre : </label> <input
+									<label class="control-label" for="nombre">Nombre De Usuario: </label> <input
 										id="nombre" type="text" class="form-control" th:field="*{nombre}"
-										required autofocus="autofocus">
-								</div>
-
-								<div class="form-group">
-									<label class="control-label" for="apellido">Apellido : </label> <input
-										id="apellido" class="form-control" th:field="*{apellido}"
 										required autofocus="autofocus">
 								</div>
 

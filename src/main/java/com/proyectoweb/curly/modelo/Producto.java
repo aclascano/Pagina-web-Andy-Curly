@@ -1,10 +1,5 @@
 package com.proyectoweb.curly.modelo;
-
-import org.springframework.web.multipart.MultipartFile;
-
 import javax.persistence.*;
-import java.security.PrivateKey;
-import java.util.List;
 
 @Entity
 @Table(name = "producto")

@@ -24,6 +24,8 @@ public class ProductoServicioImpl implements ProductoServicio{
         }
         return productos;
     }
+
+    //LISTAR NOMBRES DE PRODUCTOS PARA DASHBOARD
     public List<String> listarNombresProductos() {
         List<Producto> productos = repositorio.findAll();
         List<String> nombresProductos = new ArrayList<>();
@@ -33,6 +35,7 @@ public class ProductoServicioImpl implements ProductoServicio{
         return nombresProductos;
     }
 
+    //LISTAR PRECIOS DE PRODUCTOS PARA DASHBOARD
     public List<Integer> listarCantidadProductos() {
         List<Producto> productos = repositorio.findAll();
         List<Integer> cantidadesProductos = new ArrayList<>();
