@@ -67,13 +67,13 @@ public class CarritoControlador {
         modelo.addAttribute("productos", productos);
 
         //Mostrar el objeto de cada linea de pedido
-        modelo.addAttribute("lineapedidos", lineaServicio.listarLineas());
-
-        List<LineaPedido> listaLineas = lineaServicio.listarLineas();
+        List<LineaPedido> lineapedidos = lineaServicio.obtenerLineasPorIdCarrito(carrito.getId_car());
+        modelo.addAttribute("lineapedidos",lineapedidos);
+        ;
 
         //CONTAR LINEAS
         int count = 1;
-        for (LineaPedido linea : listaLineas) {
+        for (LineaPedido linea : lineapedidos) {
             modelo.addAttribute("count", count);
             count++;
             // lógica de la iteración
@@ -81,7 +81,7 @@ public class CarritoControlador {
 
         //SUMAR EL SUBTOTAL DE LOS PRODUCTOS
         double total = 0.0;
-        for (LineaPedido linea : listaLineas) {
+        for (LineaPedido linea : lineapedidos) {
             total += linea.getCantidad() * linea.getProducto().getPrecio();
         }
         modelo.addAttribute("total", total);

@@ -379,7 +379,7 @@
           <td class="text-wrap text-center" style="max-width: 200px;">
             <a th:href="@{/pedidos/{id}/aprobar(id=${pedido.id_ped})}" class="btn" style="background-color:#F2D8DF"> Interactuar pedido</a>
             <a href="#" class="btn" style="background-color:#F2A7BB"> Eliminar</a>
-            <a href="#" class="btn" style="background-color:#F2A7BB"> Enviar Recibo</a>
+            <a th:href="@{/pedidos/{id}/recibo(id=${pedido.id_ped})}" class="btn" style="background-color:#F2A7BB"> Generar Recibo</a>
           </td>
         </tr>
 

@@ -64,6 +64,7 @@ public class ClienteControlador {
     //VER LAS DIRECCIONES QUE POSEE UN CLIENTE
     @GetMapping("/clientes/{id}/direcciones")
     public String mostrarDireccionesCliente(@PathVariable Integer id, Model modelo) {
+
         modelo.addAttribute("cliente", servicio.obtenerClientePorId(id));
 
         List<Direccion> direcciones = direccionServicio.listarDireccionesPorClienteId(id);
